@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api/credits")
 class CreditResource(
     private val creditService: CreditService
+    //testando o commit
 ) {
 
 
