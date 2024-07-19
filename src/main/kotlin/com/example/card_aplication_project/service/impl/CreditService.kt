@@ -1,9 +1,9 @@
 package com.example.card_aplication_project.service.impl
 
 import com.example.card_aplication_project.entity.Credit
+import com.example.card_aplication_project.entity.Customer
 import com.example.card_aplication_project.repository.CreditRepository
 import com.example.card_aplication_project.service.ICreditService
-import jakarta.persistence.Id
 import org.springframework.stereotype.Service
 import java.util.*
 
@@ -13,7 +13,7 @@ class CreditService(
     private val creditRepository: CreditRepository,
     private val customerService: CustomerService
 ) : ICreditService {
-    override fun save(credit: Credit): Credit {
+    fun save(credit: Customer): Credit {
         credit.apply {
             customer = customerService.findByID(credit.customer?.id!!)
         }
