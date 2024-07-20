@@ -8,6 +8,7 @@ CREATE TABLE customer (
    zip_code VARCHAR(255) NOT NULL,
    street VARCHAR(255) NOT NULL,
    house_number BIGINT NOT NULL,
+   income BIGINT NOT NULL,
    CONSTRAINT pk_customer PRIMARY KEY (id)
 );
 
