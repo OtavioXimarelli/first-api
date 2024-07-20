@@ -12,6 +12,8 @@ data class CreditView(
     val creditValue: BigDecimal,
     val dayFirstInstallment: LocalDate,
     val numberOfInstallments: Int,
+    val customerEmail: String,
+    val incomeCustomer: BigDecimal?,
     val status: Status,
     val customer: Customer?,
     val id: Long?
@@ -22,6 +24,8 @@ data class CreditView(
         creditValue = credit.creditValue,
         dayFirstInstallment = credit.dayFirstInstallment,
         numberOfInstallments = credit.numberOfInstallment,
+        customerEmail = credit.customer?.email.toString(),
+        incomeCustomer = credit.customer?.income,
         status = credit.status,
         customer = credit.customer,
         id = credit.id

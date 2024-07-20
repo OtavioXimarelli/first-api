@@ -6,6 +6,9 @@ import com.example.card_aplication_project.dto.CustomerUpdateDto
 import com.example.card_aplication_project.dto.CustomerView
 import com.example.card_aplication_project.entity.Customer
 import com.example.card_aplication_project.service.impl.CustomerService
+import org.apache.coyote.Response
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 
 // Importações de anotações do Spring para mapeamento de endpoints REST
 import org.springframework.web.bind.annotation.DeleteMapping
@@ -28,16 +31,16 @@ class CustomerResource( // Declaração da classe CustomerResource
 
     // Anotação que indica que este método responde a requisições POST (criação de cliente)
     @PostMapping
-    fun saveCustomer(@RequestBody customerDto: CustomerDto): String { // Método para salvar um novo cliente
+    fun saveCustomer(@RequestBody customerDto: CustomerDto): ResponseEntity<String> { // Método para salvar um novo cliente
         val savedCustomer = this.customerService.save(customerDto.toEntity()) // Salva o cliente usando o serviço
-        return "Customer ${savedCustomer.email} successfully saved!" // Retorna uma mensagem de sucesso
+        return ResponseEntity.status(HttpStatus.CREATED).body( "Customer ${savedCustomer.email} successfully saved!") // Retorna uma mensagem de sucesso
     }
 
     // Anotação que indica que este método responde a requisições GET (busca de cliente por ID)
     @GetMapping("/{id}")
-    fun findById(@PathVariable id: Long): CustomerView { // Método para buscar um cliente por ID
+    fun findById(@PathVariable id: Long): ResponseEntity<CustomerView> { // Método para buscar um cliente por ID
         val customer: Customer = this.customerService.findByID(id) // Busca o cliente usando o serviço
-        return CustomerView(customer) // Retorna uma visão (DTO) do cliente encontrado
+        return ResponseEntity.status(HttpStatus.OK).body( CustomerView(customer)) // Retorna uma visão (DTO) do cliente encontrado
     }
 
     // Anotação que indica que este método responde a requisições DELETE (exclusão de cliente por ID)
@@ -49,10 +52,10 @@ class CustomerResource( // Declaração da classe CustomerResource
     fun updateCustomer(
         @RequestParam(value = "customerId") id: Long, // Parâmetro da requisição que representa o ID do cliente
         @RequestBody customerUpdateDto: CustomerUpdateDto // DTO com os dados para atualização do cliente
-    ): CustomerView {
+    ): ResponseEntity<CustomerView> {
         val customer: Customer = this.customerService.findByID(id) // Busca o cliente a ser atualizado
         val customerToUpdate: Customer = customerUpdateDto.toEntity(customer) // Converte o DTO em entidade
         val updatedCustomer: Customer = customerService.save(customerToUpdate) // Salva o cliente atualizado
-        return CustomerView(updatedCustomer) // Retorna uma visão (DTO) do cliente atualizado
+        return ResponseEntity.status(HttpStatus.OK).body( CustomerView(updatedCustomer)) // Retorna uma visão (DTO) do cliente atualizado
     }
 }
