@@ -1,6 +1,6 @@
-package com.example.card_aplication_project.entity
+package com.example.card_application_project.entity
 
-import com.example.card_aplication_project.enums.Status
+import com.example.card_application_project.enums.Status
 import java.math.BigDecimal
 import java.time.LocalDate
 import java.util.*

@@ -1,6 +1,6 @@
-package com.example.card_aplication_project.repository
+package com.example.card_application_project.repository
 
-import com.example.card_aplication_project.entity.Credit
+import com.example.card_application_project.entity.Credit
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 import java.util.UUID

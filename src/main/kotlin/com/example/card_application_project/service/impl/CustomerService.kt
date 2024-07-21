@@ -1,8 +1,8 @@
-package com.example.card_aplication_project.service.impl
+package com.example.card_application_project.service.impl
 
-import com.example.card_aplication_project.entity.Customer
-import com.example.card_aplication_project.repository.CustomerRepository
-import com.example.card_aplication_project.service.ICustomerService
+import com.example.card_application_project.entity.Customer
+import com.example.card_application_project.repository.CustomerRepository
+import com.example.card_application_project.service.ICustomerService
 import org.springframework.stereotype.Service
 
 

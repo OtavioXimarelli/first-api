@@ -1,7 +1,6 @@
-package com.example.card_aplication_project.dto
+package com.example.card_application_project.dto
 
-import com.example.card_aplication_project.entity.Address
-import com.example.card_aplication_project.entity.Customer
+import com.example.card_application_project.entity.Customer
 import java.math.BigDecimal
 
 data class CustomerUpdateDto(

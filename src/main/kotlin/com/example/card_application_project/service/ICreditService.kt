@@ -1,8 +1,6 @@
-package com.example.card_aplication_project.service
+package com.example.card_application_project.service
 
-import com.example.card_aplication_project.entity.Credit
-import jakarta.persistence.Id
-import org.aspectj.apache.bcel.classfile.Code
+import com.example.card_application_project.entity.Credit
 import java.util.UUID
 
 interface ICreditService {

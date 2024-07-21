@@ -1,12 +1,11 @@
-package com.example.card_aplication_project.controller
+package com.example.card_application_project.controller
 
-import com.example.card_aplication_project.dto.CreditDto
-import com.example.card_aplication_project.dto.CreditView
-import com.example.card_aplication_project.dto.CreditViewList
-import com.example.card_aplication_project.entity.Credit
-import com.example.card_aplication_project.service.impl.CreditService
+import com.example.card_application_project.dto.CreditDto
+import com.example.card_application_project.dto.CreditView
+import com.example.card_application_project.dto.CreditViewList
+import com.example.card_application_project.entity.Credit
+import com.example.card_application_project.service.impl.CreditService
 import org.springframework.http.HttpStatus
-import org.springframework.http.HttpStatusCode
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

@@ -1,8 +1,8 @@
-package com.example.card_aplication_project.service.impl
+package com.example.card_application_project.service.impl
 
-import com.example.card_aplication_project.entity.Credit
-import com.example.card_aplication_project.repository.CreditRepository
-import com.example.card_aplication_project.service.ICreditService
+import com.example.card_application_project.entity.Credit
+import com.example.card_application_project.repository.CreditRepository
+import com.example.card_application_project.service.ICreditService
 import org.springframework.stereotype.Service
 import java.util.*
 

@@ -1,6 +1,6 @@
-package com.example.card_aplication_project.service
+package com.example.card_application_project.service
 
-import com.example.card_aplication_project.entity.Customer
+import com.example.card_application_project.entity.Customer
 
 interface ICustomerService {
 

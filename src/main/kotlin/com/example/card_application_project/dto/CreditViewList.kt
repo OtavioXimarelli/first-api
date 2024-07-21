@@ -1,7 +1,6 @@
-package com.example.card_aplication_project.dto
+package com.example.card_application_project.dto
 
-import com.example.card_aplication_project.entity.Credit
-import org.aspectj.apache.bcel.classfile.Code
+import com.example.card_application_project.entity.Credit
 import java.math.BigDecimal
 import java.util.UUID
 

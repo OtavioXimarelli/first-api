@@ -1,12 +1,11 @@
-package com.example.card_aplication_project.controller // Define o pacote (localização lógica) da classe
+package com.example.card_application_project.controller // Define o pacote (localização lógica) da classe
 
 // Importações de classes de DTOs (Data Transfer Objects), entidade e serviço
-import com.example.card_aplication_project.dto.CustomerDto
-import com.example.card_aplication_project.dto.CustomerUpdateDto
-import com.example.card_aplication_project.dto.CustomerView
-import com.example.card_aplication_project.entity.Customer
-import com.example.card_aplication_project.service.impl.CustomerService
-import org.apache.coyote.Response
+import com.example.card_application_project.dto.CustomerDto
+import com.example.card_application_project.dto.CustomerUpdateDto
+import com.example.card_application_project.dto.CustomerView
+import com.example.card_application_project.entity.Customer
+import com.example.card_application_project.service.impl.CustomerService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 
