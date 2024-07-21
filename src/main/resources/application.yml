@@ -1,14 +1,11 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:credit_application_request_system_db
-    username: otavio
-  #jpa:
-    #hibernate:
-     # ddl-auto: create-drop
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
-      settings:
-        trace: false
-        web-allow-others: false
+    url: jdbc:postgresql://localhost:5432/credit_application_request_system_db  # Atualize com o nome do seu banco no PostgreSQL
+    driver-class-name: org.postgresql.Driver
+    username: postgres # Altere para o nome do usuário do PostgreSQL
+    password: ximaqwer # Altere para a senha do usuário do PostgreSQL
+  jpa:
+    hibernate:
+      ddl-auto: update  # Ajuste conforme sua estratégia de criação de tabelas (update, create, create-drop, validate)
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  # Remova a configuração do H2, pois não será mais utilizado
